@@ -1,0 +1,33 @@
+<ion-view view-title="Busqueda" ng-init="card_visible=false">
+  <ion-content>
+		<div class="padding">
+		<button class="button button icon-left ion-search button-large button-block button-dark" ng-click="scanBarcode()">Buscar producto</button>
+		</div>
+		
+		<div class="card" ng-show="card_visible">
+			<div class="item">
+			    <h2>Codigo: {{myData.Code}}</h2>
+			    <p>{{myData.Product}}</p>
+		  </div>
+		  <div class="item item-body item-text-wrap">
+		  	<img class="full-image" src="./img/colorful-triangles-background.png">
+			    <p>{{myData.Description}}</p>
+			    <div class="subdued">Precio: ${{myData.Price}} pesos</div>
+			    <div class="subdued">En existencia: {{myData.Qty}}</div>
+		  </div>
+		  
+		  <div class="item tabs tabs-secondary tabs-icon-left">
+		    <a class="tab-item" href="#">
+		      <i class="icon ion-chatbox"></i>
+		      Comentarios
+		    </a>
+		    <a class="tab-item" href="#">
+		      <i class="icon ion-ios7-cart"></i>
+		      Carrito de compras
+		    </a>
+		  </div>
+		  
+		</div>
+		
+  </ion-content>
+</ion-view>
